@@ -1,1 +1,45 @@
-Hello, this is html text
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZEC/USDT GRID BACKTESTER</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header class="row hdr">
+      <span>ZEC/USDT GRID BACKTESTER</span>
+    </header>
+
+    <section class="block">
+      <div class="label">INPUTS</div>
+      <div class="grid2">
+        <label><span class="k">START</span><input type="datetime-local" id="start" /></label>
+        <label><span class="k">END</span><input type="datetime-local" id="end" /></label>
+        <label><span class="k">MIN</span><input type="number" id="min" step="any" /></label>
+        <label><span class="k">MAX</span><input type="number" id="max" step="any" /></label>
+      </div>
+      <div class="row controls">
+        <label class="inv"><span class="k">INVEST $</span><input type="number" id="invest" step="any" value="100" /></label>
+        <label class="inv"><span class="k">FEE %</span><input type="number" id="fee" step="any" value="0.1" /></label>
+        <label class="inv"><span class="k">MAX GRIDS</span><input type="number" id="maxgrids" step="1" value="100" /></label>
+        <button id="run">RUN</button>
+      </div>
+      <div id="err" class="err"></div>
+    </section>
+
+    <section class="block">
+      <div class="label">PROFIT vs GRIDS</div>
+      <canvas id="plot" width="900" height="420"></canvas>
+    </section>
+
+    <section class="block">
+      <div class="label">RESULT</div>
+      <div id="result" class="result muted">run a backtest to see the optimal grid count</div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
