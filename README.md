@@ -8,7 +8,26 @@ site and deploys it to GitHub Pages (about 1–2 minutes). Recipes are added and
 edited mostly by the Hermes agent on dobby, but editing a file by hand on
 GitHub works the same way.
 
-## Adding or changing a recipe
+## Who maintains it
+
+**Dobby** adds, changes and deletes recipes. Dobby is the Hermes agent on our
+home server, and we talk to it on Telegram. Send it a recipe link (or "ändere
+…", "lösche …") and it does the following:
+
+1. reads the page's recipe data (`npm run -s import`), or the page text if
+   there is none;
+2. writes `src/recipes/<slug>.json` in German, keeping every amount, time and
+   temperature from the original;
+3. runs `npm run validate`, commits as **Dobby** (`Rezept: <Titel>`) and
+   pushes to `main`;
+4. replies with the link once it's live.
+
+It pushes with a deploy key that has write access to this repository only. Its
+instructions and the setup live in Andre's private server repo (`setup/18`
+there). Commits by hand work the same way, from GitHub's web editor or a
+clone. Before Dobby's next change, it pulls.
+
+## Adding or changing a recipe by hand
 
 1. Create or edit `src/recipes/<slug>.json`. The slug is the URL
    (`/r/<slug>`): lowercase, `a-z`, `0-9`, single hyphens, umlauts written
