@@ -9,8 +9,7 @@
 	let servings = $derived(r.servings);
 	const factor = $derived(servings / r.servings);
 
-	// Ingredients ticked off and steps done, keyed "group-index".
-	let have = $state(new Set());
+	// Steps tapped as done, keyed "group-index".
 	let done = $state(new Set());
 
 	/** @param {Set<string>} set @param {string} key */
@@ -27,33 +26,6 @@
 		const a = formatAmount(i.amount * factor);
 		const range = i.amountMax !== undefined ? `–${formatAmount(i.amountMax * factor)}` : '';
 		return `${a}${range}${i.unit ? ` ${i.unit}` : ''}`;
-	}
-
-	// Cook mode: keep the screen on while cooking.
-	/** @type {WakeLockSentinel | null} */
-	let lock = $state(null);
-	let canLock = $state(false);
-
-	$effect(() => {
-		canLock = 'wakeLock' in navigator;
-		return () => {
-			lock?.release();
-		};
-	});
-
-	async function toggleLock() {
-		if (lock) {
-			await lock.release();
-			lock = null;
-			return;
-		}
-		try {
-			const sentinel = await navigator.wakeLock.request('screen');
-			sentinel.addEventListener('release', () => (lock = null));
-			lock = sentinel;
-		} catch {
-			lock = null;
-		}
 	}
 
 	/** @type {[string, number][]} */
@@ -94,12 +66,6 @@
 		{/if}
 	</div>
 
-	{#if r.tags.length}
-		<p class="tags">
-			{#each r.tags as tag (tag)}<span>{tag}</span>{/each}
-		</p>
-	{/if}
-
 	<div class="cols">
 		<section class="ingredients">
 			<div class="head">
@@ -121,13 +87,9 @@
 				{#if g.title}<h3>{g.title}</h3>{/if}
 				<ul>
 					{#each g.items as i, ii (ii)}
-						{@const key = `${gi}-${ii}`}
 						<li>
-							<label class:checked={have.has(key)}>
-								<input type="checkbox" checked={have.has(key)} onchange={() => (have = flip(have, key))} />
-								<span class="qty">{quantity(i)}</span>
-								<span>{i.name}{#if i.note}<span class="note">, {i.note}</span>{/if}</span>
-							</label>
+							<span class="qty">{quantity(i)}</span>
+							<span>{i.name}{#if i.note}<span class="note">, {i.note}</span>{/if}</span>
 						</li>
 					{/each}
 				</ul>
@@ -135,14 +97,7 @@
 		</section>
 
 		<section class="steps">
-			<div class="head">
-				<h2>Zubereitung</h2>
-				{#if canLock}
-					<button class="cook" aria-pressed={!!lock} onclick={toggleLock} title="Bildschirm bleibt an">
-						{lock ? 'Kochmodus an' : 'Kochmodus'}
-					</button>
-				{/if}
-			</div>
+			<h2>Zubereitung</h2>
 			{#each r.steps as g, gi (gi)}
 				{#if g.title}<h3>{g.title}</h3>{/if}
 				<ol>
@@ -202,18 +157,6 @@
 		font-size: 0.75rem;
 		text-transform: uppercase;
 		letter-spacing: 0.06em;
-	}
-	.tags {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 6px;
-		margin: 14px 0 0;
-		font-size: 0.82rem;
-	}
-	.tags span {
-		padding: 2px 9px;
-		border-radius: 6px;
-		background: var(--accent-soft);
 	}
 	.cols {
 		display: grid;
@@ -293,18 +236,13 @@
 		text-decoration: underline;
 		cursor: pointer;
 	}
-	.ingredients label {
+	.ingredients li {
 		display: grid;
-		grid-template-columns: auto 5.4em 1fr;
+		grid-template-columns: 5.4em 1fr;
 		gap: 10px;
 		align-items: baseline;
 		padding: 7px 0;
 		border-bottom: 1px solid var(--line);
-		cursor: pointer;
-	}
-	.ingredients input {
-		accent-color: var(--accent);
-		transform: translateY(2px);
 	}
 	.qty {
 		font-weight: 600;
@@ -313,21 +251,16 @@
 	.note {
 		color: var(--muted);
 	}
-	.checked,
-	.checked .note {
-		color: var(--done);
-		text-decoration: line-through;
-	}
 	.steps ol {
 		counter-reset: step;
 	}
-	.steps li {
+	.steps ol li {
 		counter-increment: step;
 		position: relative;
 		padding-left: 44px;
 		margin-bottom: 6px;
 	}
-	.steps li::before {
+	.steps ol li::before {
 		content: counter(step);
 		position: absolute;
 		left: 0;
@@ -355,21 +288,8 @@
 	.done .step {
 		color: var(--done);
 	}
-	.steps li.done::before {
+	.steps ol li.done::before {
 		content: '✓';
-	}
-	.cook {
-		padding: 6px 14px;
-		border: 1px solid var(--line);
-		border-radius: 999px;
-		background: var(--surface);
-		font-size: 0.88rem;
-		cursor: pointer;
-	}
-	.cook[aria-pressed='true'] {
-		background: var(--accent);
-		border-color: var(--accent);
-		color: #fff;
 	}
 	.notes-h {
 		margin-top: 30px;

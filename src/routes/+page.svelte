@@ -5,20 +5,11 @@
 	let { data } = $props();
 
 	let query = $state('');
-	/** @type {string[]} */
-	let active = $state([]);
 
 	const shown = $derived.by(() => {
 		const words = fold(query).split(/\s+/).filter(Boolean);
-		return data.list.filter(
-			(r) => active.every((t) => r.tags.includes(t)) && words.every((w) => r.haystack.includes(w))
-		);
+		return data.list.filter((r) => words.every((w) => r.haystack.includes(w)));
 	});
-
-	/** @param {string} tag */
-	function toggle(tag) {
-		active = active.includes(tag) ? active.filter((t) => t !== tag) : [...active, tag];
-	}
 </script>
 
 <svelte:head>
@@ -28,23 +19,15 @@
 <div class="search">
 	<input
 		type="search"
-		placeholder="Suchen – Gericht, Zutat, Tag …"
+		placeholder="Suchen – Gericht oder Zutat …"
 		aria-label="Rezepte durchsuchen"
 		bind:value={query}
 	/>
 </div>
 
-{#if data.tags.length}
-	<div class="tags" role="group" aria-label="Nach Tag filtern">
-		{#each data.tags as tag (tag)}
-			<button class="tag" aria-pressed={active.includes(tag)} onclick={() => toggle(tag)}>{tag}</button>
-		{/each}
-	</div>
-{/if}
-
 <p class="count">
 	{shown.length}
-	{shown.length === 1 ? 'Rezept' : 'Rezepte'}{#if query || active.length}&nbsp;gefunden{/if}
+	{shown.length === 1 ? 'Rezept' : 'Rezepte'}{#if query}&nbsp;gefunden{/if}
 </p>
 
 <ul class="grid">
@@ -55,7 +38,6 @@
 				{#if r.description}<p class="desc">{r.description}</p>{/if}
 				<p class="meta">
 					{#if r.total}<span>{formatMinutes(r.total)}</span>{/if}
-					{#each r.tags as tag (tag)}<span>{tag}</span>{/each}
 				</p>
 			</a>
 		</li>
@@ -75,24 +57,6 @@
 		border-radius: var(--radius);
 		background: var(--surface);
 		font-size: 1rem;
-	}
-	.tags {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 8px;
-	}
-	.tag {
-		padding: 5px 12px;
-		border: 1px solid var(--line);
-		border-radius: 999px;
-		background: var(--surface);
-		font-size: 0.88rem;
-		cursor: pointer;
-	}
-	.tag[aria-pressed='true'] {
-		background: var(--accent);
-		border-color: var(--accent);
-		color: #fff;
 	}
 	.count {
 		margin: 18px 2px 10px;

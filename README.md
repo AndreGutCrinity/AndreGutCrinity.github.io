@@ -37,7 +37,7 @@ example. In short:
   "servings": 2,                     // every amount is for this many
   "servingsLabel": "Personen",       // optional: "Stück", "Blech", "Zopf"
   "time": { "prep": 10, "cook": 25, "total": 35 },      // minutes, each optional
-  "tags": ["Vegetarisch", "Schnell"],
+  "tags": ["Vegetarisch", "Schnell"],  // not shown, only searched
   "ingredients": [
     { "title": "Sauce",              // group title optional
       "items": [

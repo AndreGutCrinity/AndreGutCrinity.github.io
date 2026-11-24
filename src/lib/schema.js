@@ -60,7 +60,7 @@ export const Recipe = z.strictObject({
 			total: minutes.optional()
 		})
 		.optional(),
-	/** Short, capitalised: "Vegetarisch", "Pasta", "Ofen", "Dessert". */
+	/** Not shown on the site; only the search box matches them. "Vegetarisch", "Dessert". */
 	tags: z.array(text).default([]),
 	ingredients: z.array(group(Ingredient)).min(1),
 	steps: z.array(group(text)).min(1),
