@@ -1,0 +1,78 @@
+{
+  "title": "Vegane Reisnudelsuppe (Pho)",
+  "description": "Vietnamesische Reisnudelsuppe mit einer Brühe aus Gemüsebrühe, Misopaste und gerösteten Gewürzen, dazu knuspriger Tofu und viele frische Kräuter.",
+  "source": {
+    "url": "https://www.zuckerjagdwurst.com/de/rezepte/vegane-reisnudelsuppe-pho",
+    "name": "Zuckerjagdwurst"
+  },
+  "servings": 4,
+  "tags": ["Vegan", "Suppe", "Asiatisch", "Tofu"],
+  "ingredients": [
+    {
+      "title": "Brühe",
+      "items": [
+        { "amount": 2, "unit": "l", "name": "Gemüsebrühe" },
+        { "amount": 2, "unit": "EL", "name": "helle Misopaste" },
+        { "amount": 1, "unit": "TL", "name": "Sojasauce" },
+        { "amount": 3, "name": "Schalotten" },
+        { "amount": 50, "unit": "g", "name": "Ingwer" },
+        { "amount": 1, "name": "Zimtstange" },
+        { "amount": 3, "name": "Sternanis" },
+        { "amount": 2, "name": "Nelken" },
+        { "amount": 1, "unit": "TL", "name": "Koriandersamen" },
+        { "amount": 2, "unit": "EL", "name": "Hefeflocken" },
+        { "amount": 150, "unit": "ml", "name": "heißes Wasser", "note": "zum Ziehenlassen der Hefeflocken" }
+      ]
+    },
+    {
+      "title": "Einlage",
+      "items": [
+        { "amount": 200, "unit": "g", "name": "Reisnudeln" },
+        { "amount": 100, "unit": "g", "name": "Edamame" },
+        { "amount": 250, "unit": "g", "name": "gebackener Tofu" },
+        { "name": "Kokosöl", "note": "etwas zum Anbraten" }
+      ]
+    },
+    {
+      "title": "Zum Servieren",
+      "items": [
+        { "amount": 1, "name": "Chili" },
+        { "amount": 1, "name": "Frühlingszwiebel" },
+        { "amount": 1, "name": "Limette" },
+        { "name": "Minze", "note": "zum Servieren" },
+        { "name": "Koriander", "note": "zum Servieren" },
+        { "name": "Sojasprossen", "note": "zum Servieren" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Vorbereiten",
+      "items": [
+        "Hefeflocken mit dem heißen Wasser in einer kleinen Tasse verrühren und ziehen lassen, bis sie gebraucht werden. Reisnudeln und Edamame nach Packungsanleitung zubereiten und danach beiseitestellen.",
+        "Zimtstange, Sternanis, Nelken und Koriandersamen in einer fettfreien Pfanne rösten, bis sie ihre Aromen entfalten. Herausnehmen und beiseitestellen. Schalotten und Ingwer halbieren oder grob zerkleinern, nicht schälen, und in derselben Pfanne anbraten, sie dürfen dunkel werden."
+      ]
+    },
+    {
+      "title": "Brühe",
+      "items": [
+        "Gemüsebrühe in einem grossen Topf aufkochen. Misopaste einrühren, dann die gerösteten Gewürze, Schalotten und Ingwer dazugeben und ca. 15 Minuten köcheln lassen.",
+        "Die Brühe durch ein Sieb giessen, damit Gewürze, Schalotten und Ingwer abgesiebt werden, und zurück in den Topf geben. Die gelbliche Flüssigkeit der Hefeflocken-Mischung dazugeben, den Schleim entsorgen. Mit Sojasauce abschmecken."
+      ]
+    },
+    {
+      "title": "Tofu",
+      "items": [
+        "Tofu mit etwas Kokosöl in einer Pfanne anbraten, bis er Farbe bekommt. Beiseitestellen."
+      ]
+    },
+    {
+      "title": "Anrichten",
+      "items": [
+        "Chili und Frühlingszwiebel in feine Ringe schneiden, die Limette vierteln.",
+        "Reisnudeln, Edamame und Tofu in Schüsseln verteilen und mit der heissen Brühe auffüllen. Minze, Koriander, Chili, Frühlingszwiebel, Limette und Sojasprossen zum Bedienen dazustellen, damit sich jeder nach Geschmack bedient."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}
