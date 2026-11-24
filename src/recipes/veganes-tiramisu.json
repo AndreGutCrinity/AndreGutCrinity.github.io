@@ -1,0 +1,73 @@
+{
+  "title": "Veganes Tiramisu",
+  "description": "Tiramisu ohne Ei und Milchprodukte: Biskuit, in Espresso und Amaretto getränkt, dazu eine Creme aus Kokosjoghurt und veganer Sahne. Im Kühlschrank ziehen lassen.",
+  "source": {
+    "url": "https://www.einfachkochen.de/rezepte/veganes-tiramisu-einfach-sooo-cremig",
+    "name": "einfach kochen"
+  },
+  "servings": 6,
+  "tags": ["Dessert", "Vegan", "Italien", "Kaffee"],
+  "ingredients": [
+    {
+      "title": "Biskuit",
+      "items": [
+        { "amount": 230, "unit": "g", "name": "Weizenmehl" },
+        { "amount": 100, "unit": "g", "name": "Zucker" },
+        { "amount": 1, "unit": "Pck", "name": "Vanillezucker" },
+        { "amount": 1, "unit": "TL", "name": "Backpulver" },
+        { "amount": 1, "unit": "Prise", "name": "Salz" },
+        { "amount": 200, "unit": "ml", "name": "Wasser", "note": "mit Kohlensäure" },
+        { "amount": 2, "unit": "EL", "name": "geschmacksneutrales Öl" }
+      ]
+    },
+    {
+      "title": "Creme",
+      "items": [
+        { "amount": 250, "unit": "ml", "name": "vegane Sahne", "note": "aufschlagbar" },
+        { "amount": 1, "unit": "Pck", "name": "Sahnesteif" },
+        { "amount": 50, "unit": "g", "name": "Puderzucker" },
+        { "amount": 1, "unit": "Pck", "name": "Vanillezucker" },
+        { "amount": 400, "unit": "g", "name": "pflanzlicher Joghurt", "note": "z. B. Kokosjoghurt" }
+      ]
+    },
+    {
+      "title": "Tränke",
+      "items": [
+        { "amount": 100, "unit": "ml", "name": "starker Espresso" },
+        { "amount": 4, "unit": "EL", "name": "Amaretto", "note": "alternativ: 1 TL Mandelaroma" }
+      ]
+    },
+    {
+      "title": "Zum Bestäuben",
+      "items": [
+        { "amount": 1, "amountMax": 2, "unit": "EL", "name": "Backkakao" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Biskuit",
+      "items": [
+        "Backofen auf 180 °C Ober- und Unterhitze vorheizen. Mehl, Zucker, Vanillezucker, Backpulver und Salz in einer grossen Schüssel mischen. Öl und Wasser dazugeben und mit dem Schneebesen zu einem klumpenfreien Teig verrühren.",
+        "Ein Backblech mit Backpapier auslegen und den Teig dünn darauf streichen. Die Menge füllt ca. ¾ eines normalen Backblechs. 15–20 Minuten auf der mittleren Schiene backen, mit dem Holzstäbchen prüfen. Auf einem Kuchengitter vollständig auskühlen lassen."
+      ]
+    },
+    {
+      "title": "Tränke und Creme",
+      "items": [
+        "Starken Espresso kochen, in einem tiefen Teller mit dem Amaretto verrühren und abkühlen lassen.",
+        "Vegane Sahne mit dem Handrührgerät cremig aufschlagen. Sahnesteif, Puderzucker und Vanillezucker dazugeben und weitere 3–4 Minuten schlagen.",
+        "Kokosjoghurt in einer grossen Schüssel glatt rühren. Die geschlagene Sahne vorsichtig mit dem Schneebesen oder Kuchenspatel unterheben."
+      ]
+    },
+    {
+      "title": "Schichten",
+      "items": [
+        "Den abgekühlten Biskuit in Streifen schneiden, die quer in eine Auflaufform (28 x 20 cm) passen. Die Streifen von beiden Seiten mehrfach mit einer Gabel einstechen, damit der Kaffee besser einzieht.",
+        "Jeden Streifen kurz in die Espresso-Amaretto-Mischung tauchen, herausnehmen und als erste Schicht auf dem Boden der Form verteilen. Mit 1–2 EL Espresso beträufeln.",
+        "Die Joghurt-Sahne-Creme darauf verstreichen. Mit einer zweiten Schicht getränkter Biskuitstreifen abdecken und wieder mit Creme bestreichen. So lange wiederholen, bis Biskuit und Creme aufgebraucht sind. Ca. 3 Stunden oder über Nacht im Kühlschrank ziehen lassen. Vor dem Servieren grosszügig mit Backkakao bestäuben."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}
