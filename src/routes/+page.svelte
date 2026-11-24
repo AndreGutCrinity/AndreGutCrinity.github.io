@@ -17,13 +17,7 @@
 	<meta name="description" content="Alle Rezepte, die Dobby für uns gesammelt hat." />
 </svelte:head>
 
-<section class="hero">
-	<h1>Was kochen wir heute?</h1>
-	<p>
-		Jedes Rezept, das ihr Dobby schickt, schreibt er hier sauber auf – auf Deutsch und mit allen Mengen.
-		Bisher sind es <strong>{data.list.length}</strong>.
-	</p>
-</section>
+<h1 class="visually-hidden">Rezepte</h1>
 
 <div class="search">
 	<input
@@ -55,26 +49,17 @@
 </ul>
 
 <style>
-	.hero {
-		margin: 26px 0 0;
-		padding: 26px 26px 24px;
-		border-radius: var(--radius);
-		background: var(--elf-soft);
-	}
-	.hero h1 {
-		margin: 0 0 8px;
-		font-size: clamp(1.8rem, 5vw, 2.4rem);
-	}
-	.hero p {
-		margin: 0;
-		max-width: 56ch;
-		color: var(--muted);
-	}
-	.hero strong {
-		color: var(--elf);
+	/* Keeps a page heading for screen readers; the logo is the visible title. */
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
 	}
 	.search {
-		margin: 16px 0 22px;
+		margin: 18px 0 22px;
 	}
 	input {
 		width: 100%;

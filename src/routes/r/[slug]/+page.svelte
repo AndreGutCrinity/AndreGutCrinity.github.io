@@ -1,6 +1,7 @@
 <script>
 	import { resolve } from '$app/paths';
 	import { formatAmount } from '#lib/format.js';
+	import dobby from '#lib/dobby.webp';
 
 	let { data } = $props();
 	const r = $derived(data.recipe);
@@ -107,9 +108,14 @@
 		</section>
 	</div>
 
-	<p class="added">
-		Von Dobby aufgeschrieben am {date(r.added)}{#if r.updated}, zuletzt geändert am {date(r.updated)}{/if}.
-	</p>
+	<footer class="signoff">
+		<a href={resolve('/')} title="Zurück in die Küche">
+			<img src={dobby} width="300" height="407" alt="Dobby – zurück in die Küche" />
+		</a>
+		<p>
+			Von Dobby aufgeschrieben am {date(r.added)}{#if r.updated}, zuletzt geändert am {date(r.updated)}{/if}.
+		</p>
+	</footer>
 </article>
 
 <style>
@@ -289,8 +295,24 @@
 		background: var(--elf-soft);
 		border-radius: 0 8px 8px 0;
 	}
-	.added {
-		margin-top: 40px;
+	.signoff {
+		margin-top: 48px;
+		text-align: center;
+	}
+	.signoff a {
+		display: inline-block;
+		transition: transform 0.25s;
+	}
+	.signoff a:hover {
+		transform: rotate(-4deg);
+	}
+	.signoff img {
+		display: block;
+		width: 180px;
+		height: auto;
+	}
+	.signoff p {
+		margin: 10px 0 0;
 		color: var(--muted);
 		font-size: 0.82rem;
 	}

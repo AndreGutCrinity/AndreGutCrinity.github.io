@@ -1,15 +1,23 @@
 <script>
 	import '../app.css';
 	import { resolve } from '$app/paths';
-	import Mark from '#lib/Mark.svelte';
+	import { page } from '$app/state';
+	import logo from '#lib/logo.webp';
+	import logoText from '#lib/logo-text.webp';
 
 	let { children } = $props();
+	// Figure + lettering on the homepage; lettering alone elsewhere
+	// (recipes show Dobby at the bottom instead).
+	const home = $derived(page.route.id === '/');
 </script>
 
-<header class="wrap">
+<header class="wrap" class:home>
 	<a class="brand" href={resolve('/')}>
-		<Mark size={30} />
-		<span>Dobbys Elfenküche</span>
+		{#if home}
+			<img src={logo} width="920" height="465" alt="Dobbys Elfenküche" />
+		{:else}
+			<img src={logoText} width="600" height="406" alt="Dobbys Elfenküche" />
+		{/if}
 	</a>
 </header>
 
@@ -17,41 +25,25 @@
 	{@render children()}
 </main>
 
-<footer class="wrap">
-	<p>Gesammelt und sauber aufgeschrieben von Dobby, dem Küchenelf.</p>
-</footer>
-
 <style>
 	header {
-		padding-top: 22px;
-		padding-bottom: 6px;
+		display: flex;
+		justify-content: center;
+		padding-top: 14px;
 	}
 	.brand {
-		display: inline-flex;
-		align-items: center;
-		gap: 10px;
-		font-family: var(--serif);
-		font-size: 1.2rem;
-		font-weight: 600;
-		color: var(--text);
-		text-decoration: none;
-		letter-spacing: 0.01em;
+		display: block;
+		width: min(100%, 190px);
 	}
-	.brand :global(svg) {
-		transform: rotate(-8deg);
-		transition: transform 0.25s;
+	.home .brand {
+		width: min(100%, 440px);
 	}
-	.brand:hover :global(svg) {
-		transform: rotate(6deg);
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
 	}
 	main {
 		padding-bottom: 48px;
-	}
-	footer p {
-		margin: 0;
-		padding: 22px 0 36px;
-		border-top: 1px solid var(--line);
-		color: var(--muted);
-		font-size: 0.85rem;
 	}
 </style>
