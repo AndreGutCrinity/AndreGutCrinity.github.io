@@ -1,0 +1,35 @@
+{
+  "title": "Kürbis-Linsensuppe",
+  "description": "Cremige Suppe aus Kürbis und roten Linsen, zum Schluss mit Kernen bestreut. Winterlich und schnell gemacht.",
+  "source": {
+    "url": "https://fooby.ch/de/rezepte/amp.id-18491.html",
+    "name": "Fooby"
+  },
+  "servings": 2,
+  "time": { "prep": 30, "total": 30 },
+  "tags": ["Hauptgericht", "Suppe", "Winter", "Linsen"],
+  "ingredients": [
+    {
+      "items": [
+        { "amount": 2, "unit": "EL", "name": "Olivenöl" },
+        { "amount": 1, "name": "Zwiebel" },
+        { "amount": 500, "unit": "g", "name": "Kürbis" },
+        { "amount": 60, "unit": "g", "name": "rote Linsen" },
+        { "amount": 6, "unit": "dl", "name": "Gemüsebouillon" },
+        { "name": "Salz und Pfeffer", "note": "nach Bedarf" },
+        { "amount": 2, "unit": "EL", "name": "Kernenmix" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "items": [
+        "Olivenöl in einer Pfanne erwärmen. Zwiebel ca. 5 Minuten andünsten.",
+        "Kürbis beigeben und ca. 5 Minuten mitdünsten.",
+        "Linsen beigeben, mit der Gemüsebouillon aufkochen und zugedeckt ca. 10 Minuten köcheln lassen.",
+        "Suppe pürieren und würzen. Mit dem Kernenmix anrichten."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}
