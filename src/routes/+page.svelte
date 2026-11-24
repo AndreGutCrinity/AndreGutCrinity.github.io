@@ -13,22 +13,33 @@
 </script>
 
 <svelte:head>
-	<title>Unsere Rezepte</title>
+	<title>Dobbys Elfenküche</title>
+	<meta name="description" content="Alle Rezepte, die Dobby für uns gesammelt hat." />
 </svelte:head>
+
+<section class="hero">
+	<h1>Was kochen wir heute?</h1>
+	<p>
+		Jedes Rezept, das ihr Dobby schickt, schreibt er hier sauber auf – auf Deutsch und mit allen Mengen.
+		Bisher sind es <strong>{data.list.length}</strong>.
+	</p>
+</section>
 
 <div class="search">
 	<input
 		type="search"
-		placeholder="Suchen – Gericht oder Zutat …"
+		placeholder="Dobby, such mir … (Gericht oder Zutat)"
 		aria-label="Rezepte durchsuchen"
 		bind:value={query}
 	/>
 </div>
 
-<p class="count">
-	{shown.length}
-	{shown.length === 1 ? 'Rezept' : 'Rezepte'}{#if query}&nbsp;gefunden{/if}
-</p>
+{#if query}
+	<p class="count">
+		{shown.length}
+		{shown.length === 1 ? 'Rezept' : 'Rezepte'} gefunden
+	</p>
+{/if}
 
 <ul class="grid">
 	{#each shown as r (r.slug)}
@@ -42,13 +53,31 @@
 			</a>
 		</li>
 	{:else}
-		<li class="empty">Nichts gefunden.</li>
+		<li class="empty">Dobby hat überall nachgeschaut, aber nichts gefunden.</li>
 	{/each}
 </ul>
 
 <style>
+	.hero {
+		margin: 26px 0 0;
+		padding: 26px 26px 24px;
+		border-radius: var(--radius);
+		background: var(--elf-soft);
+	}
+	.hero h1 {
+		margin: 0 0 8px;
+		font-size: clamp(1.8rem, 5vw, 2.4rem);
+	}
+	.hero p {
+		margin: 0;
+		max-width: 56ch;
+		color: var(--muted);
+	}
+	.hero strong {
+		color: var(--elf);
+	}
 	.search {
-		margin: 18px 0 14px;
+		margin: 16px 0 22px;
 	}
 	input {
 		width: 100%;
@@ -59,7 +88,7 @@
 		font-size: 1rem;
 	}
 	.count {
-		margin: 18px 2px 10px;
+		margin: -8px 2px 12px;
 		color: var(--muted);
 		font-size: 0.9rem;
 	}
@@ -111,7 +140,9 @@
 	.meta span {
 		padding: 2px 8px;
 		border-radius: 6px;
-		background: var(--accent-soft);
+		background: var(--elf-soft);
+		color: var(--elf);
+		font-weight: 600;
 	}
 	.empty {
 		color: var(--muted);

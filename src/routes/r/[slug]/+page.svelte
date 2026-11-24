@@ -42,11 +42,11 @@
 </script>
 
 <svelte:head>
-	<title>{r.title} · Unsere Rezepte</title>
+	<title>{r.title} · Dobbys Elfenküche</title>
 	{#if r.description}<meta name="description" content={r.description} />{/if}
 </svelte:head>
 
-<a class="back" href={resolve('/')}>← Alle Rezepte</a>
+<a class="back" href={resolve('/')}>← Zurück in die Küche</a>
 
 <article>
 	<h1>{r.title}</h1>
@@ -111,7 +111,7 @@
 			{/each}
 
 			{#if r.notes?.length}
-				<h2 class="notes-h">Tipps</h2>
+				<h2 class="notes-h">Dobbys Tipps</h2>
 				<ul class="notes">
 					{#each r.notes as note, ni (ni)}<li>{note}</li>{/each}
 				</ul>
@@ -120,7 +120,7 @@
 	</div>
 
 	<p class="added">
-		Hinzugefügt am {date(r.added)}{#if r.updated}, geändert am {date(r.updated)}{/if}
+		Von Dobby aufgeschrieben am {date(r.added)}{#if r.updated}, zuletzt geändert am {date(r.updated)}{/if}.
 	</p>
 </article>
 
@@ -297,8 +297,8 @@
 	.notes li {
 		padding: 10px 14px;
 		margin-bottom: 8px;
-		border-left: 3px solid var(--accent);
-		background: var(--surface);
+		border-left: 3px solid var(--elf);
+		background: var(--elf-soft);
 		border-radius: 0 8px 8px 0;
 	}
 	.added {

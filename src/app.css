@@ -6,6 +6,10 @@
 	--line: #e9e0d5;
 	--accent: #b4532a;
 	--accent-soft: #f6e5da;
+	--elf: #5f7d3c;
+	--elf-dark: #41592a;
+	--elf-soft: #e8eedc;
+	--cream: #fff7ef;
 	--done: #b3a89f;
 	--radius: 14px;
 	--serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
@@ -21,6 +25,10 @@
 		--line: #3a332e;
 		--accent: #e08a5f;
 		--accent-soft: #3b2a21;
+		--elf: #8fb262;
+		--elf-dark: #4d6a30;
+		--elf-soft: #262e1c;
+		--cream: #f3eadf;
 		--done: #6d625a;
 	}
 }

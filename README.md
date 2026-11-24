@@ -1,6 +1,6 @@
-# Unsere Rezepte
+# Dobbys Elfenküche
 
-Our recipe collection, live at **https://andregutcrinity.github.io**.
+Our recipe collection, kept by Dobby (the Hermes agent on our home server), live at **https://andregutcrinity.github.io**.
 
 A static SvelteKit site. Each recipe is one JSON file in
 [`src/recipes/`](src/recipes/); every push to `main` validates them, builds the
