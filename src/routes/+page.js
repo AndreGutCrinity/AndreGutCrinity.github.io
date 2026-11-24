@@ -6,7 +6,6 @@ export function load() {
 		slug: r.slug,
 		title: r.title,
 		description: r.description,
-		total: r.time?.total ?? ((r.time?.prep ?? 0) + (r.time?.cook ?? 0) || undefined),
 		// Everything the search box matches against, pre-folded.
 		haystack: fold(
 			[r.title, r.description, ...r.tags, ...r.ingredients.flatMap((g) => g.items.map((i) => i.name))]

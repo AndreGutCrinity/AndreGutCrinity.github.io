@@ -1,0 +1,61 @@
+{
+  "title": "Tiramisù",
+  "description": "Mascarponecreme mit Orangenschale und Löffelbiskuits, getränkt in Kaffee und Amaretto. Für die grosse Form.",
+  "servings": 8,
+  "tags": ["Dessert", "Vegetarisch", "Italien", "Kaffee"],
+  "ingredients": [
+    {
+      "title": "Mascarponecreme",
+      "items": [
+        { "amount": 80, "unit": "g", "name": "Zucker" },
+        { "amount": 4, "name": "Eigelbe", "note": "frisch" },
+        { "amount": 1, "name": "Bio-Orange", "note": "abgeriebene Schale" },
+        { "amount": 500, "unit": "g", "name": "Mascarpone" },
+        { "amount": 4, "name": "Eiweisse", "note": "frisch" },
+        { "amount": 1, "unit": "Prise", "name": "Salz" },
+        { "amount": 1, "unit": "EL", "name": "Zucker" }
+      ]
+    },
+    {
+      "title": "Flüssigkeit",
+      "items": [
+        { "amount": 400, "unit": "ml", "name": "starker Kaffee", "note": "heiss" },
+        { "amount": 8, "unit": "EL", "name": "Amaretto" },
+        { "amount": 2, "unit": "EL", "name": "Zucker" }
+      ]
+    },
+    {
+      "title": "Einschichten",
+      "items": [
+        { "amount": 200, "unit": "g", "name": "Löffelbiskuits" },
+        { "name": "Kakaopulver", "note": "zum Bestäuben" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Mascarponecreme",
+      "items": [
+        "Zucker, Eigelbe und Orangenschale mit den Schwingbesen des Handrührgeräts rühren, bis die Masse heller ist.",
+        "Mascarpone glatt rühren und unter die Eimasse rühren.",
+        "Eiweisse mit dem Salz steif schlagen. Zucker dazugeben und weiterschlagen, bis der Eischnee glänzt.",
+        "Eischnee mit dem Gummischaber sorgfältig unter die Masse ziehen und kühl stellen."
+      ]
+    },
+    {
+      "title": "Flüssigkeit",
+      "items": [
+        "Kaffee, Amaretto und Zucker verrühren, bis sich der Zucker aufgelöst hat. Auskühlen lassen."
+      ]
+    },
+    {
+      "title": "Einschichten",
+      "items": [
+        "Die Hälfte der Löffelbiskuits mit der gezuckerten Seite nach unten in die Form legen und mit der Hälfte der Flüssigkeit beträufeln. Die Hälfte der Creme darauf verteilen.",
+        "Die restlichen Biskuits in die übrige Flüssigkeit tauchen, darauflegen und mit der restlichen Creme bedecken.",
+        "Zugedeckt ca. 2 Stunden kühl stellen. Mit Kakaopulver bestäuben."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}

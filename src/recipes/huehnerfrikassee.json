@@ -1,0 +1,47 @@
+{
+  "title": "Hühnerfrikassee",
+  "description": "Hühnerstreifen mit Erbsen, Rüebli und Champignons in einer Senf-Weisswein-Sauce, dazu Reis.",
+  "servings": 4,
+  "tags": ["Geflügel", "Reis", "Vegan möglich"],
+  "ingredients": [
+    {
+      "items": [
+        { "name": "Öl", "note": "zum Anbraten" },
+        { "name": "Hühnerbrust", "note": "oder vegane Hühnerbrust" },
+        { "amount": 1, "name": "Zwiebel" },
+        { "amount": 1, "unit": "Glas", "name": "Erbsen und Rüebli" },
+        { "amount": 1, "unit": "Glas", "name": "Champignons" }
+      ]
+    },
+    {
+      "title": "Sauce",
+      "items": [
+        { "amount": 4, "unit": "EL", "name": "Butter", "note": "oder vegane Butter" },
+        { "amount": 4, "unit": "EL", "name": "Mehl" },
+        { "amount": 50, "unit": "ml", "name": "Weisswein" },
+        { "amount": 2, "unit": "EL", "name": "Senf" },
+        { "amount": 250, "unit": "ml", "name": "Rahm" },
+        { "amount": 250, "unit": "ml", "name": "Bouillon" },
+        { "name": "Salz, Pfeffer, Muskat" },
+        { "name": "Zitronensaft", "note": "reichlich" }
+      ]
+    },
+    {
+      "title": "Dazu",
+      "items": [{ "name": "Reis" }]
+    }
+  ],
+  "steps": [
+    {
+      "items": [
+        "Öl in einer Bratpfanne erhitzen. Hühnerbrust in Streifen schneiden und rundum anbraten.",
+        "Inzwischen die Zwiebel hacken und in die Pfanne geben.",
+        "Erbsen, Rüebli und Champignons abgiessen und ebenfalls in die Pfanne geben.",
+        "Nebenher die Butter in einem Topf schmelzen. Mehl darüberstäuben, glatt rühren und mit dem Weisswein verrühren. Senf, Rahm und Bouillon zu einer glatten Sauce einrühren.",
+        "Mit Salz, Pfeffer, Muskat und reichlich Zitronensaft abschmecken. Sauce in die Pfanne geben und alles mischen.",
+        "Mit Reis servieren."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}

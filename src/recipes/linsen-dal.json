@@ -1,0 +1,35 @@
+{
+  "title": "Linsen-Dal",
+  "description": "Rote Linsen in Kokosmilch mit gelber Currypaste und Spinat, dazu Brot.",
+  "servings": 4,
+  "tags": ["Vegetarisch", "Linsen", "Curry", "Eine Pfanne"],
+  "ingredients": [
+    {
+      "items": [
+        { "name": "Öl" },
+        { "amount": 300, "unit": "g", "name": "rote Linsen" },
+        { "amount": 4, "unit": "EL", "name": "gelbe Currypaste" },
+        { "amount": 500, "unit": "ml", "name": "Kokosmilch" },
+        { "amount": 500, "unit": "ml", "name": "Wasser" },
+        { "name": "Salz" },
+        { "amount": 400, "unit": "g", "name": "Blattspinat", "note": "frisch oder tiefgekühlt" }
+      ]
+    },
+    {
+      "title": "Dazu",
+      "items": [{ "name": "Brot" }]
+    }
+  ],
+  "steps": [
+    {
+      "items": [
+        "Öl in einer Pfanne erwärmen. Linsen und Currypaste dazugeben und ca. 3 Minuten andämpfen.",
+        "Kokosmilch und Wasser dazugiessen und salzen. Tiefgekühlten Spinat jetzt dazugeben.",
+        "Unter gelegentlichem Rühren ca. 15 Minuten köcheln lassen.",
+        "Frischen Spinat erst nach den 15 Minuten dazugeben und nur noch zusammenfallen lassen.",
+        "Mit Brot servieren."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Lauchsuppe",
+  "description": "Pürierte Lauch-Kartoffel-Suppe mit Rahm und Muskat, dazu Brot.",
+  "servings": 4,
+  "tags": ["Vegetarisch", "Suppe", "Einfach"],
+  "ingredients": [
+    {
+      "items": [
+        { "amount": 400, "unit": "g", "name": "Lauch", "note": "in Stücken" },
+        { "amount": 300, "unit": "g", "name": "Kartoffeln", "note": "mehligkochend, in Stücken" },
+        { "amount": 1, "unit": "l", "name": "Gemüsebouillon" },
+        { "amount": 200, "unit": "ml", "name": "Rahm" },
+        { "name": "Muskat, Pfeffer" }
+      ]
+    },
+    {
+      "title": "Dazu",
+      "items": [{ "name": "Brot" }]
+    }
+  ],
+  "steps": [
+    {
+      "items": [
+        "Lauch und Kartoffeln ca. 3 Minuten andämpfen.",
+        "Bouillon dazugiessen und aufkochen. Hitze reduzieren und ca. 20 Minuten köcheln lassen.",
+        "Rahm dazugiessen und ca. 10 Minuten weiterköcheln. Pürieren und mit Muskat und Pfeffer würzen.",
+        "Mit Brot servieren."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}

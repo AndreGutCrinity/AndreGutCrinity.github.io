@@ -24,14 +24,6 @@ export function formatAmount(n) {
 	return n.toLocaleString('de-CH', { maximumFractionDigits: 1 });
 }
 
-/** @param {number} minutes */
-export function formatMinutes(minutes) {
-	const h = Math.floor(minutes / 60);
-	const m = minutes % 60;
-	if (!h) return `${m} Min.`;
-	return m ? `${h} Std. ${m} Min.` : `${h} Std.`;
-}
-
 /** Lowercase, without accents/umlaut dots, for search. @param {string} s */
 export function fold(s) {
 	return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();

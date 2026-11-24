@@ -45,17 +45,18 @@ words, keeping every quantity, temperature and time from the original.
 ## Format
 
 The schema with comments is [`src/lib/schema.js`](src/lib/schema.js), and
-[`src/recipes/shakshuka.json`](src/recipes/shakshuka.json) is a complete
-example. In short:
+[`src/recipes/tiramisu.json`](src/recipes/tiramisu.json) is a complete
+example. There are no cooking times: the site doesn't show them, and a `time`
+field fails validation. Times inside the steps ("ca. 20 Minuten köcheln") stay.
+In short:
 
 ```jsonc
 {
-  "title": "Shakshuka",
+  "title": "Tiramisù",
   "description": "optional, 1–2 Sätze",
   "source": { "url": "https://…", "name": "Fooby" },   // optional
   "servings": 2,                     // every amount is for this many
   "servingsLabel": "Personen",       // optional: "Stück", "Blech", "Zopf"
-  "time": { "prep": 10, "cook": 25, "total": 35 },      // minutes, each optional
   "tags": ["Vegetarisch", "Schnell"],  // not shown, only searched
   "ingredients": [
     { "title": "Sauce",              // group title optional
@@ -82,7 +83,7 @@ npm run -s import -- https://fooby.ch/de/rezepte/…
 ```
 
 This prints the recipe data that the page itself publishes (schema.org
-`Recipe`): raw ingredient lines, steps, servings, times. It does not write a
+`Recipe`): raw ingredient lines, steps, servings. It does not write a
 file; it gives you exact numbers to build one from. Exit code `2` means the
 page has no such data (Swissmilk, for example), so read the page itself.
 

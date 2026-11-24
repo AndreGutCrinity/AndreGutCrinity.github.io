@@ -1,0 +1,54 @@
+{
+  "title": "Steinpilzrisotto",
+  "description": "Cremiges Risotto mit getrockneten Steinpilzen und ihrem Einweichwasser, mit Sbrinz und Butter fertiggerührt.",
+  "servings": 2,
+  "tags": ["Vegetarisch", "Risotto", "Reis", "Pilze"],
+  "ingredients": [
+    {
+      "title": "Steinpilze",
+      "items": [
+        { "amount": 20, "unit": "g", "name": "getrocknete Steinpilze" },
+        { "amount": 200, "unit": "ml", "name": "Wasser" }
+      ]
+    },
+    {
+      "title": "Risotto",
+      "items": [
+        { "amount": 1, "unit": "EL", "name": "Butter" },
+        { "amount": 1, "name": "Zwiebel", "note": "fein geschnitten" },
+        { "amount": 200, "unit": "g", "name": "Risottoreis", "note": "z. B. Carnaroli" },
+        { "amount": 100, "unit": "ml", "name": "Weisswein" },
+        { "amount": 900, "unit": "ml", "name": "Gemüsebouillon", "note": "heiss" }
+      ]
+    },
+    {
+      "title": "Fertigstellen",
+      "items": [
+        { "amount": 40, "unit": "g", "name": "Sbrinz", "note": "gerieben, oder Parmesan" },
+        { "amount": 2, "unit": "EL", "name": "Butter" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Steinpilze",
+      "items": [
+        "Pilze im Wasser einweichen. Herausnehmen und beiseitestellen.",
+        "Das Einweichwasser durch einen Kaffeefilter giessen, auffangen und beiseitestellen."
+      ]
+    },
+    {
+      "title": "Risotto",
+      "items": [
+        "Butter in einer Pfanne erwärmen und die Zwiebel andämpfen. Reis dazugeben und unter Rühren dünsten, bis er glasig ist.",
+        "Weisswein dazugiessen und fast vollständig einkochen lassen.",
+        "Pilze dazugeben. Bouillon und Einweichwasser unter häufigem Rühren nach und nach dazugiessen, sodass der Reis immer knapp mit Flüssigkeit bedeckt ist. Ca. 20 Minuten köcheln, bis der Reis cremig und al dente ist."
+      ]
+    },
+    {
+      "title": "Fertigstellen",
+      "items": ["Sbrinz und Butter darunterrühren und das Risotto würzen."]
+    }
+  ],
+  "added": "2026-11-24"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Kürbisauflauf",
+  "description": "Nudeln in einer Curry-Rahmsauce mit Hokkaido-Kürbis, mit Käse überbacken.",
+  "servings": 4,
+  "tags": ["Vegetarisch", "Pasta", "Kürbis", "Auflauf", "Herbst"],
+  "ingredients": [
+    {
+      "title": "Sauce",
+      "items": [
+        { "amount": 1, "name": "Hokkaido-Kürbis" },
+        { "amount": 2, "name": "rote Zwiebeln" },
+        { "amount": 3, "name": "Knoblauchzehen" },
+        { "name": "Olivenöl" },
+        { "amount": 1, "unit": "TL", "name": "Currypulver" },
+        { "amount": 1, "unit": "EL", "name": "Mehl" },
+        { "amount": 450, "unit": "ml", "name": "Gemüsebouillon" },
+        { "amount": 250, "unit": "ml", "name": "Rahm" },
+        { "name": "Salz, Pfeffer, Muskat" },
+        { "name": "Zitronensaft" },
+        { "name": "Hefeflocken", "note": "nach Belieben" }
+      ]
+    },
+    {
+      "title": "Nudeln und Überbacken",
+      "items": [
+        { "amount": 350, "unit": "g", "name": "Nudeln" },
+        { "amount": 100, "unit": "g", "name": "Käse", "note": "oder veganer Käse" },
+        { "name": "Petersilie", "note": "zum Garnieren" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Sauce",
+      "items": [
+        "Kürbis waschen, entkernen und die Fasern entfernen. Mit der Schale in mundgerechte Stücke schneiden. Zwiebeln und Knoblauch schälen und fein schneiden.",
+        "Olivenöl in einer hohen beschichteten Pfanne erhitzen und die Zwiebeln bei mittlerer Hitze glasig dünsten. Knoblauch, Kürbis und Currypulver dazugeben und 2–3 Minuten mitbraten.",
+        "Mehl dazugeben, gut mit dem Gemüse verrühren und kurz anschwitzen.",
+        "Bouillon und Rahm dazugiessen und einmal aufkochen. Bei mittlerer Hitze 10–15 Minuten leicht köcheln lassen, bis der Kürbis weich ist und die Sauce etwas eindickt.",
+        "Mit Salz, Pfeffer, Muskat, Zitronensaft und nach Belieben Hefeflocken abschmecken."
+      ]
+    },
+    {
+      "title": "Nudeln",
+      "items": [
+        "Während die Sauce köchelt, in einem grossen Topf Wasser aufkochen und grosszügig salzen. Nudeln darin 1–2 Minuten kürzer als auf der Packung angegeben kochen, abgiessen und gut abtropfen lassen."
+      ]
+    },
+    {
+      "title": "Überbacken",
+      "items": [
+        "Backofen auf 200 °C Ober-/Unterhitze (180 °C Umluft) vorheizen. Eine Auflaufform mit Olivenöl ausstreichen.",
+        "Nudeln unter die Sauce mischen, in die Form füllen und mit dem Käse bestreuen. In der Mitte des Ofens 20–25 Minuten backen.",
+        "Petersilie waschen, abtropfen lassen und hacken. Den Auflauf damit bestreuen."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}

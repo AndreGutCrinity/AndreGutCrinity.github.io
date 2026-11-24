@@ -4,7 +4,7 @@
 //   npm run -s import -- <url>
 //
 // Prints the recipe exactly as the site publishes it: original language, raw
-// ingredient lines, steps, servings, times. It does NOT write a recipe file;
+// ingredient lines, steps, servings. It does NOT write a recipe file;
 // whoever runs it turns this into src/recipes/<slug>.json (in German), so the
 // numbers come from the page's own data rather than from reading prose.
 //
@@ -40,15 +40,6 @@ function str(v) {
 	if (typeof v === 'number') return String(v);
 	if (Array.isArray(v)) return v.map(str).filter(Boolean).join(', ') || undefined;
 	return undefined;
-}
-
-/** ISO 8601 duration ("PT1H30M", "P0DT45M") -> minutes. @param {unknown} v */
-function minutes(v) {
-	if (typeof v !== 'string') return undefined;
-	const m = v.match(/^P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:\d+S)?)?$/i);
-	if (!m) return undefined;
-	const total = (Number(m[1] ?? 0) * 24 + Number(m[2] ?? 0)) * 60 + Number(m[3] ?? 0);
-	return total || undefined;
 }
 
 /** @param {any} node @returns {boolean} */
@@ -133,9 +124,6 @@ const out = {
 	author: str(recipe.author?.name ?? recipe.author),
 	publisher: str(recipe.publisher?.name),
 	recipeYield: str(recipe.recipeYield),
-	prepMinutes: minutes(recipe.prepTime),
-	cookMinutes: minutes(recipe.cookTime),
-	totalMinutes: minutes(recipe.totalTime),
 	category: str(recipe.recipeCategory),
 	cuisine: str(recipe.recipeCuisine),
 	keywords: str(recipe.keywords),

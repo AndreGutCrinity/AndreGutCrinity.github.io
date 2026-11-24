@@ -1,0 +1,42 @@
+{
+  "title": "Spaghettini al Limone",
+  "description": "Spaghettini in Zitronen-Knoblauch-Öl, mit knusprigem Rohschinken.",
+  "servings": 2,
+  "tags": ["Pasta", "Schnell", "Italien"],
+  "ingredients": [
+    {
+      "title": "Braten",
+      "items": [
+        { "amount": 50, "unit": "g", "name": "Rohschinken", "note": "in Tranchen" },
+        { "amount": 2, "unit": "EL", "name": "Olivenöl" },
+        { "name": "Knoblauch" }
+      ]
+    },
+    {
+      "title": "Kochen",
+      "items": [
+        { "amount": 250, "unit": "g", "name": "Spaghettini" },
+        { "name": "Salzwasser", "note": "siedend" },
+        { "amount": 1, "name": "Bio-Zitrone", "note": "abgeriebene Schale und Saft der Hälfte" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Braten",
+      "items": [
+        "Rohschinken in einer beschichteten Bratpfanne knusprig braten, in Stücke brechen und beiseitestellen.",
+        "Öl in derselben Pfanne warm werden lassen. Knoblauch und Zitronenschale dazugeben und ca. 5 Minuten ziehen lassen."
+      ]
+    },
+    {
+      "title": "Kochen",
+      "items": [
+        "Spaghettini im Salzwasser knapp al dente kochen. 3 EL Kochwasser beiseitestellen.",
+        "Spaghettini abtropfen lassen und mit dem Kochwasser zum Öl geben. Zitronensaft dazugeben und unter ständigem Rühren ca. 2 Minuten fertig kochen.",
+        "Mit dem Rohschinken bestreuen und würzen."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}

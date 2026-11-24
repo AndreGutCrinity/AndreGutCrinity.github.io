@@ -1,0 +1,46 @@
+{
+  "title": "Polenta mit Maisspinat",
+  "description": "Cremige Polenta mit Sbrinz und Sambal Oelek, dazu Mais und Spinat in Rahm.",
+  "servings": 2,
+  "tags": ["Vegetarisch", "Polenta", "Schnell"],
+  "ingredients": [
+    {
+      "title": "Maisspinat",
+      "items": [
+        { "name": "Öl" },
+        { "amount": 1, "name": "Zwiebel" },
+        { "amount": 1, "unit": "kleine Dose", "name": "Mais" },
+        { "amount": 100, "unit": "ml", "name": "Saucen-Halbrahm" },
+        { "name": "Wasser" },
+        { "name": "Zitronensaft" },
+        { "amount": 100, "unit": "g", "name": "Tiefkühlspinat", "note": "mit ganzen Blättern sieht es schöner aus" }
+      ]
+    },
+    {
+      "title": "Polenta",
+      "items": [
+        { "amount": 500, "unit": "ml", "name": "Gemüsebouillon" },
+        { "amount": 140, "unit": "g", "name": "mittelfeine Polenta", "note": "4 Min. Kochzeit" },
+        { "amount": 75, "unit": "g", "name": "Sbrinz", "note": "gerieben" },
+        { "amount": 2, "unit": "TL", "name": "Sambal Oelek" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Maisspinat",
+      "items": [
+        "Zwiebel in Streifen schneiden und mit dem Mais im warmen Öl andämpfen.",
+        "Saucen-Halbrahm, Wasser und Zitronensaft dazugeben, ca. 5 Minuten köcheln lassen und würzen. Spinat dazugeben. Frischen Spinat nur noch zusammenfallen lassen."
+      ]
+    },
+    {
+      "title": "Polenta",
+      "items": [
+        "Bouillon aufkochen. Polenta einrühren, nicht einfach hineinschütten, sonst gibt es Klumpen. Unter Rühren bei kleiner Hitze ca. 4 Minuten zu einem dicken Brei köcheln.",
+        "Käse und Sambal Oelek daruntermischen und würzen."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}

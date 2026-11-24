@@ -8,7 +8,6 @@ import { z } from 'zod';
 export const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 const text = z.string().trim().min(1);
-const minutes = z.number().int().positive();
 const isoDate = z.iso.date(); // YYYY-MM-DD
 
 export const Ingredient = z
@@ -52,14 +51,6 @@ export const Recipe = z.strictObject({
 	servings: z.number().int().positive(),
 	/** What a serving is. Default "Personen"; e.g. "Stück", "Blech", "Gläser". */
 	servingsLabel: text.optional(),
-	time: z
-		.strictObject({
-			prep: minutes.optional(),
-			cook: minutes.optional(),
-			/** Including resting/rising time, so it can exceed prep + cook. */
-			total: minutes.optional()
-		})
-		.optional(),
 	/** Not shown on the site; only the search box matches them. "Vegetarisch", "Dessert". */
 	tags: z.array(text).default([]),
 	ingredients: z.array(group(Ingredient)).min(1),

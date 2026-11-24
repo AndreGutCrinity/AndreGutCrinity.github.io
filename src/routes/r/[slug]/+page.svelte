@@ -1,6 +1,6 @@
 <script>
 	import { resolve } from '$app/paths';
-	import { formatAmount, formatMinutes } from '#lib/format.js';
+	import { formatAmount } from '#lib/format.js';
 
 	let { data } = $props();
 	const r = $derived(data.recipe);
@@ -28,15 +28,6 @@
 		return `${a}${range}${i.unit ? ` ${i.unit}` : ''}`;
 	}
 
-	/** @type {[string, number][]} */
-	const timeParts = $derived(
-		/** @type {[string, number | undefined][]} */ ([
-			['Vorbereitung', r.time?.prep],
-			['Kochen/Backen', r.time?.cook],
-			['Gesamt', r.time?.total]
-		]).filter(/** @returns {p is [string, number]} */ (p) => p[1] !== undefined)
-	);
-
 	/** @param {string} iso */
 	const date = (iso) => new Date(iso).toLocaleDateString('de-CH');
 </script>
@@ -52,19 +43,16 @@
 	<h1>{r.title}</h1>
 	{#if r.description}<p class="lead">{r.description}</p>{/if}
 
-	<div class="facts">
-		{#each timeParts as [label, value] (label)}
-			<div><span>{label}</span>{formatMinutes(value)}</div>
-		{/each}
-		{#if r.source}
+	{#if r.source}
+		<div class="facts">
 			<div>
 				<span>Quelle</span>
 				<a href={r.source.url} rel="noopener noreferrer" target="_blank">
 					{r.source.name ?? new URL(r.source.url).hostname.replace(/^www\./, '')} ↗
 				</a>
 			</div>
-		{/if}
-	</div>
+		</div>
+	{/if}
 
 	<div class="cols">
 		<section class="ingredients">

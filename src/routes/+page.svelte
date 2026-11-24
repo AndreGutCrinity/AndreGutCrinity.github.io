@@ -1,6 +1,6 @@
 <script>
 	import { resolve } from '$app/paths';
-	import { fold, formatMinutes } from '#lib/format.js';
+	import { fold } from '#lib/format.js';
 
 	let { data } = $props();
 
@@ -47,9 +47,6 @@
 			<a class="card" href={resolve('/r/[slug]', { slug: r.slug })}>
 				<h2>{r.title}</h2>
 				{#if r.description}<p class="desc">{r.description}</p>{/if}
-				<p class="meta">
-					{#if r.total}<span>{formatMinutes(r.total)}</span>{/if}
-				</p>
 			</a>
 		</li>
 	{:else}
@@ -129,20 +126,6 @@
 		line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
-	}
-	.meta {
-		margin: auto 0 0;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 6px;
-		font-size: 0.8rem;
-	}
-	.meta span {
-		padding: 2px 8px;
-		border-radius: 6px;
-		background: var(--elf-soft);
-		color: var(--elf);
-		font-weight: 600;
 	}
 	.empty {
 		color: var(--muted);

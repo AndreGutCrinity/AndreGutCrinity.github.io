@@ -1,0 +1,35 @@
+{
+  "title": "Sauerkraut-Eintopf",
+  "description": "Kartoffeln, Peperoni und Tomaten mit Sauerkraut, gewürzt mit Paprika und Wacholder.",
+  "servings": 3,
+  "tags": ["Vegetarisch", "Eintopf", "Suppe", "Kartoffeln"],
+  "ingredients": [
+    {
+      "items": [
+        { "name": "Öl" },
+        { "amount": 500, "unit": "g", "name": "Kartoffeln" },
+        { "amount": 1, "name": "Zwiebel" },
+        { "amount": 500, "unit": "ml", "name": "Gemüsebouillon" },
+        { "amount": 2, "name": "rote Peperoni" },
+        { "amount": 400, "unit": "g", "name": "gehackte geschälte Tomaten", "note": "1 Dose" },
+        { "amount": 1, "name": "Knoblauchzehe" },
+        { "amount": 2, "unit": "TL", "name": "Paprikapulver" },
+        { "name": "Wacholderbeeren" },
+        { "name": "Salz und Pfeffer" },
+        { "amount": 200, "unit": "g", "name": "Sauerkraut" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "items": [
+        "Kartoffeln schälen, waschen und klein würfeln. Zwiebel schälen und ebenso klein würfeln.",
+        "Öl in einem Topf erhitzen. Kartoffeln und Zwiebel darin bei mittlerer Hitze ca. 5 Minuten unter gelegentlichem Rühren anbraten. Mit der Bouillon ablöschen.",
+        "Peperoni waschen, halbieren, entkernen und würfeln. Mit den Tomaten in den Topf geben.",
+        "Knoblauch schälen und dazupressen. Paprikapulver, Salz, Pfeffer und Wacholderbeeren dazugeben und alles ca. 10 Minuten garen.",
+        "Sauerkraut dazugeben und den Eintopf bei schwacher Hitze noch ca. 20 Minuten köcheln lassen."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}
