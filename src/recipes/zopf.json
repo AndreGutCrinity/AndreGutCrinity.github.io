@@ -1,0 +1,46 @@
+{
+  "title": "Butterzopf",
+  "description": "Der klassische Sonntagszopf: weich, buttrig, mit glänzender Kruste.",
+  "servings": 1,
+  "servingsLabel": "Zopf",
+  "time": { "prep": 30, "cook": 40, "total": 180 },
+  "tags": ["Backen", "Brot", "Frühstück", "Schweiz"],
+  "ingredients": [
+    {
+      "title": "Teig",
+      "items": [
+        { "amount": 500, "unit": "g", "name": "Zopfmehl" },
+        { "amount": 1.5, "unit": "TL", "name": "Salz" },
+        { "amount": 1, "unit": "TL", "name": "Zucker" },
+        { "amount": 20, "unit": "g", "name": "frische Hefe", "note": "zerbröckelt" },
+        { "amount": 60, "unit": "g", "name": "Butter", "note": "weich, in Stücken" },
+        { "amount": 3, "unit": "dl", "name": "Milch", "note": "lauwarm" }
+      ]
+    },
+    {
+      "title": "Zum Bestreichen",
+      "items": [{ "amount": 1, "name": "Ei", "note": "verquirlt" }]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Teig",
+      "items": [
+        "Mehl, Salz und Zucker in einer Schüssel mischen. Hefe in der lauwarmen Milch auflösen.",
+        "Butter und Hefemilch zum Mehl geben und etwa 10 Minuten zu einem weichen, glatten Teig kneten.",
+        "Zugedeckt bei Raumtemperatur etwa 1½ Stunden aufs Doppelte aufgehen lassen."
+      ]
+    },
+    {
+      "title": "Flechten und backen",
+      "items": [
+        "Teig halbieren und jede Hälfte zu einem etwa 60 cm langen Strang rollen, der in der Mitte dicker ist als an den Enden.",
+        "Die beiden Stränge zu einem Zopf flechten, auf ein mit Backpapier belegtes Blech legen und mit Ei bestreichen.",
+        "Zugedeckt nochmals 30 Minuten aufgehen lassen. Den Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+        "Ein zweites Mal mit Ei bestreichen und in der unteren Ofenhälfte 35–40 Minuten backen. Der Zopf ist gar, wenn er beim Klopfen auf die Unterseite hohl klingt. Auf einem Gitter auskühlen lassen."
+      ]
+    }
+  ],
+  "notes": ["Für eine besonders glänzende Kruste dem Ei eine Prise Zucker beigeben."],
+  "added": "2026-11-24"
+}

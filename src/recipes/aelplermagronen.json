@@ -1,0 +1,46 @@
+{
+  "title": "Älplermagronen",
+  "description": "Hörnli und Kartoffeln in Rahm und Käse, mit goldbraunen Zwiebeln obendrauf. Dazu gehört Apfelmus.",
+  "servings": 4,
+  "time": { "prep": 15, "cook": 30, "total": 45 },
+  "tags": ["Vegetarisch", "Pasta", "Schweiz"],
+  "ingredients": [
+    {
+      "items": [
+        { "amount": 400, "unit": "g", "name": "Kartoffeln", "note": "festkochend" },
+        { "amount": 300, "unit": "g", "name": "Hörnli" },
+        { "amount": 2, "unit": "dl", "name": "Rahm" },
+        { "amount": 1, "unit": "dl", "name": "Milch" },
+        { "amount": 150, "unit": "g", "name": "Reibkäse", "note": "z. B. Gruyère oder Appenzeller" },
+        { "name": "Salz, Pfeffer, Muskatnuss", "note": "nach Belieben" }
+      ]
+    },
+    {
+      "title": "Zwiebeln",
+      "items": [
+        { "amount": 2, "name": "Zwiebeln", "note": "in feinen Ringen" },
+        { "amount": 2, "unit": "EL", "name": "Butter" }
+      ]
+    },
+    {
+      "title": "Dazu",
+      "items": [{ "amount": 300, "unit": "g", "name": "Apfelmus" }]
+    }
+  ],
+  "steps": [
+    {
+      "items": [
+        "Kartoffeln schälen und in 1–2 cm grosse Würfel schneiden.",
+        "Reichlich Salzwasser aufkochen. Kartoffeln darin 5 Minuten kochen, dann die Hörnli dazugeben und nach Packungsangabe al dente kochen. Abgiessen.",
+        "Rahm und Milch in der Pfanne erwärmen, mit Salz, Pfeffer und Muskat würzen. Kartoffeln, Hörnli und Käse daruntermischen und bei kleiner Hitze rühren, bis der Käse geschmolzen ist.",
+        "Inzwischen die Butter in einer Bratpfanne erhitzen und die Zwiebeln bei mittlerer Hitze in etwa 10 Minuten goldbraun braten.",
+        "Magronen anrichten, die Zwiebeln darüber verteilen und mit Apfelmus servieren."
+      ]
+    }
+  ],
+  "notes": [
+    "Wer mag, brät 100 g Speckwürfeli mit den Zwiebeln mit.",
+    "Kartoffeln und Hörnli brauchen zusammen etwa gleich lang wie die Hörnli allein plus 5 Minuten – die Würfel nicht grösser schneiden, sonst sind sie nicht gar."
+  ],
+  "added": "2026-11-24"
+}

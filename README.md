@@ -1,53 +1,77 @@
-# ZEC/USDT Grid-Bot Backtester
+# Unsere Rezepte
 
-A static site that backtests a **spot geometric grid bot** on ZEC/USDT and finds the
-optimal number of grids for a chosen price range and time window. The output is a
-**profit ($) vs. number of grids** plot.
+Our recipe collection, live at **https://andregutcrinity.github.io**.
 
-The website makes **no API calls**. A daily GitHub Actions cron downloads fresh 1-minute
-candles from Binance's public data dump and commits them to `data/`. The page reads
-those committed files. Full design in [`SPEC.md`](SPEC.md).
+A static SvelteKit site. Each recipe is one JSON file in
+[`src/recipes/`](src/recipes/); every push to `main` validates them, builds the
+site and deploys it to GitHub Pages (about 1–2 minutes). Recipes are added and
+edited mostly by the Hermes agent on dobby, but editing a file by hand on
+GitHub works the same way.
 
-## Use
+## Adding or changing a recipe
 
-1. Enter start/end time (UTC), the grid range (min/max price), investment ($) and fee (%).
-2. Click **RUN**. The sweep computes profit for every grid count and marks the optimum.
-3. Cross-check the price action on Binance directly (no candle chart in v1).
+1. Create or edit `src/recipes/<slug>.json`. The slug is the URL
+   (`/r/<slug>`): lowercase, `a-z`, `0-9`, single hyphens, umlauts written
+   out (`aelplermagronen`).
+2. `npm run validate`, which must print `✓`.
+3. Commit and push to `main`.
 
-With investment = **$100**, profit in dollars ≈ percent gain.
+If a recipe is invalid, the deploy fails at the validate step and the live
+site keeps the previous version.
 
-## Model (frozen — see SPEC §4)
+**Content rules:** German. Text only, no images. Steps are written in our own
+words, keeping every quantity, temperature and time from the original.
+`source.url` links back to the original.
 
-- Spot **geometric** grid: lines `L_i = Pmin · r^i`, `r = (Pmax/Pmin)^(1/N)`.
-- **Grid-profit only**: counts completed buy→sell round trips; ignores floating PnL and
-  end-of-window inventory. No leverage, no compounding.
-- Per-trip net profit is constant: `net = (I/N)·[(r−1) − f·(1+r)]`;
-  `profit(N) = net · total_trips(N)`.
-- Candle-resolution approximation: a single candle counts at most one buy + one sell per
-  interval (acceptable for loose, long-running grids).
+## Format
 
-## Data pipeline
+The schema with comments is [`src/lib/schema.js`](src/lib/schema.js), and
+[`src/recipes/shakshuka.json`](src/recipes/shakshuka.json) is a complete
+example. In short:
 
-- `scripts/fetch.mjs` — downloads Binance `data.binance.vision` 1m kline ZIPs (no auth,
-  no rate limit), stores compact columnar monthly JSON in `data/`, keeps 6 months.
-  - `node scripts/fetch.mjs` — incremental (auto-backfills if `data/` is empty)
-  - `node scripts/fetch.mjs --backfill 6` — force 6-month backfill
-- `.github/workflows/fetch-data.yml` — runs it daily at 02:00 UTC and commits changes.
-  Trigger a backfill manually via the workflow_dispatch "backfill" input.
-
-## Deploy (GitHub Pages)
-
-1. Push to `main`.
-2. Repo → Settings → Pages → Source: **Deploy from a branch**, branch `main`, folder `/`.
-3. The daily cron keeps `data/` fresh; each push auto-redeploys Pages.
-
-## Files
-
+```jsonc
+{
+  "title": "Shakshuka",
+  "description": "optional, 1–2 Sätze",
+  "source": { "url": "https://…", "name": "Fooby" },   // optional
+  "servings": 2,                     // every amount is for this many
+  "servingsLabel": "Personen",       // optional: "Stück", "Blech", "Zopf"
+  "time": { "prep": 10, "cook": 25, "total": 35 },      // minutes, each optional
+  "tags": ["Vegetarisch", "Schnell"],
+  "ingredients": [
+    { "title": "Sauce",              // group title optional
+      "items": [
+        { "amount": 2, "amountMax": 3, "name": "Knoblauchzehen", "note": "gepresst" },
+        { "amount": 400, "unit": "g", "name": "gehackte Tomaten" },
+        { "name": "Salz und Pfeffer" }   // no amount = "nach Belieben"
+      ] }
+  ],
+  "steps": [ { "title": "optional", "items": ["Schritt 1 …", "Schritt 2 …"] } ],
+  "notes": ["optional"],
+  "added": "2026-11-24",
+  "updated": "2026-11-30"            // optional
+}
 ```
-index.html   style.css   app.js        # the static site (terminal UI, B/W, Geist Mono)
-fonts/                                  # self-hosted Geist Mono (OFL)
-data/                                   # committed candles + index.json (built by cron)
-scripts/fetch.mjs                       # data fetcher
-.github/workflows/fetch-data.yml        # daily cron
-SPEC.md                                 # full specification
+
+Amounts are plain numbers (`0.5`, not `"½"`); the site shows them as `½` and
+scales them with the servings buttons.
+
+## Importing from a link
+
+```bash
+npm run -s import -- https://fooby.ch/de/rezepte/…
+```
+
+This prints the recipe data that the page itself publishes (schema.org
+`Recipe`): raw ingredient lines, steps, servings, times. It does not write a
+file; it gives you exact numbers to build one from. Exit code `2` means the
+page has no such data (Swissmilk, for example), so read the page itself.
+
+## Development
+
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm run check      # type check
+npm run build      # static site in build/
 ```
