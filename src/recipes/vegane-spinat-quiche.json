@@ -1,0 +1,75 @@
+{
+  "title": "Vegane Spinat-Quiche",
+  "description": "Herzhafte vegane Quiche mit Dinkelmürbeteig, Babyspinat, getrockneten Tomaten und einem Guss aus Cashews. Lässt sich gut vorbereiten.",
+  "source": {
+    "url": "https://dontwasteyourtaste.com/vegane-spinat-quiche/",
+    "name": "Don't waste your taste"
+  },
+  "servings": 8,
+  "tags": ["Vegan", "Quiche", "Spinat", "Backen"],
+  "ingredients": [
+    {
+      "title": "Teig",
+      "items": [
+        { "amount": 200, "unit": "g", "name": "Dinkel-Vollkornmehl", "note": "plus 1–2 EL Mehl für die Arbeitsfläche" },
+        { "amount": 0.5, "unit": "TL", "name": "Backpulver" },
+        { "amount": 0.5, "unit": "TL", "name": "Salz" },
+        { "amount": 3, "unit": "EL", "name": "Öl", "note": "aus dem Glas mit den eingelegten Tomaten" },
+        { "amount": 8, "unit": "EL", "name": "Wasser" }
+      ]
+    },
+    {
+      "title": "Füllung",
+      "items": [
+        { "amount": 130, "unit": "g", "name": "Zwiebel", "note": "1 grosse" },
+        { "amount": 1, "name": "Knoblauchzehe" },
+        { "amount": 1, "unit": "EL", "name": "Öl", "note": "aus dem Glas mit den eingelegten Tomaten" },
+        { "amount": 10, "name": "getrocknete Tomaten", "note": "eingelegt" },
+        { "amount": 300, "unit": "g", "name": "frischer Babyspinat" }
+      ]
+    },
+    {
+      "title": "Cashew-Guss",
+      "items": [
+        { "amount": 120, "unit": "g", "name": "Cashewkerne" },
+        { "amount": 250, "unit": "ml", "name": "Sojadrink", "note": "alternativ ein anderer Pflanzendrink" },
+        { "amount": 0.25, "unit": "TL", "name": "Muskatnuss", "note": "frisch gerieben, von 1 ganzen Muskatnuss" },
+        { "amount": 2, "unit": "EL", "name": "Hefeflocken" },
+        { "amount": 1, "unit": "TL", "name": "Apfelessig" },
+        { "name": "Zitronenpfeffer und Salz" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Vorbereiten",
+      "items": [
+        "Cashewkerne einweichen: entweder 1 Stunde in kaltem Wasser oder 15 Minuten in kochend heissem Wasser.",
+        "Alle Zutaten für den Teig in einer Schüssel zu einem geschmeidigen Teig kneten, in Folie wickeln und kühl stellen.",
+        "Zwiebel, Knoblauch und getrocknete Tomaten fein würfeln."
+      ]
+    },
+    {
+      "title": "Füllung",
+      "items": [
+        "1 EL Öl aus dem Tomatenglas in einer grossen Pfanne erhitzen. Die Zwiebelwürfel darin ca. 3 Minuten glasig anbraten. Knoblauch und Tomaten dazugeben und weitere 2 Minuten mitbraten. Den frischen Spinat zugeben, mit einem Deckel 1 Minute zusammenfallen lassen, dann gut vermengen und beiseitestellen.",
+        "Den Ofen auf 180 °C Umluft vorheizen."
+      ]
+    },
+    {
+      "title": "Guss",
+      "items": [
+        "Alle Zutaten für den Cashew-Guss fein pürieren, mit Salz und Zitronenpfeffer abschmecken. Mit einem Standmixer geht es am besten (alternativ Stabmixer im hohen Gefäss). Bei einer Küchenmaschine (Moulinex i-Companion XL) reichen 2 Minuten auf Stufe 12 in der Minischüssel."
+      ]
+    },
+    {
+      "title": "Backen",
+      "items": [
+        "Den Teig auf die Grösse der Form ausrollen und hineinlegen. Den Boden mit einer Gabel einstechen.",
+        "Die Spinatfüllung auf dem Teigboden verteilen und den Cashew-Guss gleichmässig darüber giessen.",
+        "35–40 Minuten in der Mitte des vorgeheizten Ofens backen."
+      ]
+    }
+  ],
+  "added": "2026-11-24"
+}
